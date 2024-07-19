@@ -15,6 +15,8 @@
   --dsg-expand-rows-indicator-width: 10px;
   --dsg-scroll-shadow-width: 7px;
   --dsg-scroll-shadow-color: rgba(0, 0, 0, 0.2);
+  --dsg-height: 688px;
+  font-family: 'Roboto, Arial, sans-serif';
 }
 
 .dsg-container {
@@ -25,12 +27,13 @@
   user-select: none;
   box-sizing: border-box;
   color: black;
-  background: white;
+  background: var(--dsg-cell-background-color);
   position: relative;
   width: 100%;
   overflow: auto;
   will-change: transform;
   direction: ltr;
+  height: var(--dsg-height)!important; 
 }
 
 .dsg-corner-indicator {
@@ -510,7 +513,9 @@
   box-sizing: border-box;
   background: none;
   padding: 0 10px;
-  font-size: 1rem;
+  /* font-size: 1rem; */
+  font-size: 14px;
+  color: var(--dsg-header-active-text-color);
   outline: none;
 }
 
@@ -577,3 +582,4 @@
   pointer-events: none;
   background: rgba(0, 0, 0, 0.03);
 }
+
